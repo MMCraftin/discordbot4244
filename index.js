@@ -1,6 +1,7 @@
 const botconfig = require("./botconfig.json");
 const tokenfile = require("./token.json");
-const Discord = require("discord.js");
+const Discord = require('discord.js');
+const client = new Discord.Client();
 const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
@@ -21,13 +22,13 @@ fs.readdir("./commands/", (err, files) => {
   });
 });
 
-bot.on("ready", async () => {
+client.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
   bot.user.setActivity("tutorials on TSC", {type: "WATCHING"});
 
 });
 
-bot.on("message", async message => {
+client.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
 
@@ -40,4 +41,4 @@ bot.on("message", async message => {
 
 });
 
-bot.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
