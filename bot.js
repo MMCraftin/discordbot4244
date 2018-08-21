@@ -9,4 +9,11 @@ const client = new Discord.Client();
   	}
 });
  // THIS  MUST  BE  THIS  WAY
+
+
+client.on("guildMemberAdd", function(member) {
+    let role = member.guild.roles.find("name", "test");
+    member.addRole(role).catch(console.error);
+});
+
 client.login(process.env.BOT_TOKEN);
