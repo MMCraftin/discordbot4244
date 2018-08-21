@@ -1,2 +1,2 @@
 worker: node bot.js
-worker: node addrole.js
+worker: node index.js
