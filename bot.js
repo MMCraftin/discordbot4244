@@ -4,8 +4,13 @@ const client = new Discord.Client();
     console.log('I am ready!');
 });
  client.on('message', message => {
-    if (message.content === 'ping') {
-    	message.reply('pong');
+    if (message.content === '!test') {
+    	message.reply('The Bot Is Up And Running');
+  	}
+});
+ client.on('message', message => {
+    if (message.content === '!test2') {
+    	message.reply('The Bot Is Up And Running');
   	}
 });
  // THIS  MUST  BE  THIS  WAY
