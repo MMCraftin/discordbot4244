@@ -8,10 +8,5 @@ const client = new Discord.Client();
     	message.reply('The Bot Is Up And Running');
   	}
 });
- client.on('message', message => {
-    if (message.content === '!test2') {
-    	message.reply('The Bot Is Up And Running');
-  	}
-});
  // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
