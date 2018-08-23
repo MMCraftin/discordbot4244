@@ -4,8 +4,8 @@ const client = new Discord.Client();
     console.log('I am ready!');
 });
  client.on('message', message => {
-    if (message.content === '!test') {
-    	message.reply('The Bot Is Up And Running');
+    if (message.content === '!peter') {
+    	message.reply('Is Gay');
   	}
 });
  // THIS  MUST  BE  THIS  WAY
